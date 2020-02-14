@@ -1,0 +1,56 @@
+.App {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 1fr 11fr;
+  grid-template-areas: 'nav'
+                        'main'
+}
+
+/* HEADER CSS */
+.header {
+  grid-area: 'nav';
+  background-color: #4c65f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  box-shadow: 3px 3px 20px 0px #0000006e;
+  border-bottom: 1px solid #0000003d;
+}
+
+.nav-button {
+  margin-top: auto;
+  height: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-top-left-radius: 5px;
+  border: 0;
+  border-top-right-radius: 5px;
+  background-color: #61d7a8;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.nav-button:hover {
+  cursor: pointer;
+  background-color: #00ab94;
+}
+
+.logo {
+  height: 70px;
+}
+
+
+.nav-left {
+  display: inline;
+}
+
+.nav-right {
+  display: inline;
+}
+
+.logo-text {
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+}
