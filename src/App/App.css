@@ -1,5 +1,6 @@
 .App {
   display: grid;
+  background-image: url('https://wallpaperplay.com/walls/full/f/8/8/89139.jpg');
   height: 100vh;
   grid-template-rows: 1fr 11fr;
   grid-template-areas: 'nav'
