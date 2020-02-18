@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- stable
+cache:
+  directories:
+  - node_modules
+script:
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: dXWQmzZitjsKNlcJ4nJwZ4G9O4nwL8Mv2Y9mNdAFnW5QSjwSQYFAxg+8rGG32VNSu2HRo+dlc1d3nnHVBPa4RGlp5xDROGZR3e0Jn1q/tPfL00jqlLYnURFlNzU1cIhug2ZywBEDIxv6wsEk6lRtP5HKoFQm+Fb1kmCId2ZTalF6Pze73YzmCt5HGpBqT7p/I7xyT1n/qlAw6+VUukBWBLYj783hPbieQinbgmV7A0SdQt9BhVmMqJPpgv7Kuh5Y49o0H6XXy/v0e0VE6lvtTK1QfU82ChFLZCZfteyqBk/yygGjdyoIjfupyXqyJ3MYPCWOmD1gQw7hgl5PcL7yTP0fygxYoSq02EuwTSbt0Wh8EsgqST3FkSJ35XXadn4Kb6omOdNgpYp05hJH4ecSsWj9b9/8LqlOhxm4e2pNLzxT1MbdJOWVN6aOlT8cuGuG3oSxRuyAzhIQBfn6SKMws55nWq4R9M1Gq7HU1fZrV5zKhPNXwZnuH9mFPSrLlkJLkOsMkUPmMz/Yd7iGpv6XEWrqcPqrxLehoqDWFnxnFd7U3c65gad3eHp8HgYvFONYwlKqlnHTsv80mHR1JqPSKuDKo3su9lchq+tCh2pLDETuQfaL+4tajVR6o3wGEiRbU71VRqHhu6pbqxH0wmiQAxN/gAgUym6rGS4WeBG9Gb8=
+app: https://notary-now-frontend.herokuapp.com
