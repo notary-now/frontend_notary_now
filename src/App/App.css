@@ -86,7 +86,7 @@
   border: 1px solid;
   display: flex;
   flex-direction: column;
-  margin-top: 20%;
+  margin-top: 10%;
   background-color: #ffffff8a;
   box-shadow: 3px 3px 20px 0px #0000006e;
 }
@@ -96,4 +96,41 @@
   border-radius: 400px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.notary-name {
+  background-color: #4c65f5;
+  height: 50px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.bio {
+  width: 80%;
+  margin: auto;
+  border: 1px solid #4c65f5;
+  background-color: aliceblue;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 34px;
+  border-radius: 3px;
+}
+
+.chat-button {
+  background-color: #61d7a8;
+  font-size: 34px;
+  font-weight: bold;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.chat-button:hover {
+  cursor: pointer;
+  background-color: #00ab94;
+}
+
+.verified {
+  height: 50px;
 }
