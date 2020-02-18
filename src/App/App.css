@@ -9,7 +9,7 @@
 
 /* HEADER CSS */
 .header {
-  grid-area: 'nav';
+  grid-area: nav;
   background-color: #4c65f5;
   display: flex;
   justify-content: space-between;
@@ -54,4 +54,46 @@
   font-size: 50px;
   color: white;
   font-weight: bold;
+}
+
+.home-img-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.home-img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  height: 500px;
+  width: 750px;
+  border: 1px solid #4c65f5;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1000px;
+  box-shadow: 3px 3px 20px 0px #0000006e;
+}
+
+
+/* Account Page */
+
+.account {
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%;
+  background-color: #ffffff8a;
+  box-shadow: 3px 3px 20px 0px #0000006e;
+}
+
+.account-img {
+  width: 20%;
+  border-radius: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
