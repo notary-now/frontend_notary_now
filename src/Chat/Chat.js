@@ -1,45 +1,37 @@
-import React, { Component } from "react";
+import React, {useState, useEffect} from "react";
 import socketIOClient from "socket.io-client";
 
-class Chat extends Component {
-  constructor() {
-    super();
-    this.state = {
-      response: ['Chat'],
-      endpoint: "http://127.0.0.1:3001",
-      input: null
-    };
-  }
+function Chat(props) {
 
-  componentDidMount() {
-    const { endpoint } = this.state;
-    const socket = socketIOClient(endpoint);
-    socket.on("chat message", data => {
-      this.setState(prevState => (
-      {
-      response: [...prevState.response, data]
-    }))}
-  )
+    let [chatSystem, updateChat] = useState([])
+    let [input, updateInput] = useState(null)
 
-  }
 
-  render() {
-    const { response } = this.state;
+
+
+  useEffect(() => {
+    socketIOClient("http://127.0.0.1:3001").on("chat message", data => {
+      updateChat(chatSystem => [...chatSystem, data])
+    })
+  }, [])
+
     return (
         <div className="chat">
-          {response.map(text => {
+          CHAT: <button className="x" onClick={() => props.showChat(false)}>X</button>
+          {chatSystem.map(text => {
             return <p>{text}</p>
           })}
-        <input onChange={(event) => this.setState({input: event.target.value})} type="text" placeholder="enter message"/><button onClick={()=>{
-
-          const { endpoint } = this.state;
-          const socket = socketIOClient(endpoint);
-          socket.emit('chat message', this.state.input)
-
-        }}>Submit</button>
+        <div className="chat-input"><input
+        onChange={(event) => updateInput(event.target.value)}
+        onKeyPress={(event)=>{
+          if (event.key === 'Enter') {
+            socketIOClient("http://127.0.0.1:3001").emit('chat message', input)
+            event.target.value = ''
+          }
+        }}
+        type="text" placeholder="enter message"/></div>
         </div>
     );
-  }
 }
 
 export default Chat;
