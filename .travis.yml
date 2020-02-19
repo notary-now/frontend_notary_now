@@ -1,7 +1,7 @@
 language: node_js
 node_js:
 - stable
-cache:
+cache: bundler
   directories:
   - node_modules
 script:
