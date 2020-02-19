@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Header from '../Header/Header'
 import Account from '../Account/Account'
+import Find from '../Find/Find'
 import {Route} from 'react-router-dom'
 import './App.css';
 
@@ -10,7 +11,7 @@ import golfing from '../Imgs/golfing.jpg'
 import notary from '../Imgs/notary.jpg'
 
 function App() {
-
+  let [chat, showChat] = useState({chat: false})
   const imgArrary = [desk,notary,golfing,boat]
   const textArray = ['Notary Now: Your busy, let us help you with your work.','Find Notaries Near you in minutes!','Get back to the things you love.','You earned it.']
   let [imgNum, setImgNum] = useState({num: 0, img:desk, text: textArray[0]})
@@ -56,6 +57,9 @@ function App() {
           return (
             <>
               <Header/>
+              <div>
+                <Find/>
+              </div>
             </>
           )
           }}
@@ -69,7 +73,7 @@ function App() {
               <>
                 <Header/>
                 <div>
-                <Account/>
+                  <Account/>
                 </div>
               </>
             )

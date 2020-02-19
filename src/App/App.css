@@ -134,3 +134,9 @@
 .verified {
   height: 50px;
 }
+
+/* Chat */
+
+.chat {
+  text-align: center;
+}
