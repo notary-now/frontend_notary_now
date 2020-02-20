@@ -7,7 +7,7 @@ function Account() {
 
   useEffect(() => {
 
-  fetch("https://backend-notary-now.herokuapp.com/api/v1/user/1/")
+  fetch("https://backend-notary-now.herokuapp.com/api/v1/notaries/1")
     .then(response => response.json())
     .then(result => setAccount(result))
     .catch(error => console.log('error', error));
