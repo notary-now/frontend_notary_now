@@ -14,7 +14,7 @@ import notary from '../Imgs/notary.jpg'
 function App() {
   let [chat, showChat] = useState(false)
   const imgArrary = [desk,notary,golfing,boat]
-  const textArray = ['Notary Now: Your busy, let us help you with your work.','Find Notaries Near you in minutes!','Get back to the things you love.','You earned it.']
+  const textArray = ['Notary Now: You are busy, let us help you with your work.','Find Notaries Near you in minutes!','Get back to the things you love.','You earned it.']
   let [imgNum, setImgNum] = useState({num: 0, img:desk, text: textArray[0]})
 
 
@@ -45,6 +45,10 @@ function App() {
              <div className="home-img-container">
               <div className="home-img" style={{'backgroundImage': `url(${imgNum.img})`}}></div>
               <h1>{imgNum.text}</h1>
+              <div className="signup">
+                <span>I want to find a notary:<br/><button>SIGN UP</button></span>
+                <span>I am a notary:<br/><button>SIGN UP</button></span>
+              </div>
              </div>
             </>
          )
