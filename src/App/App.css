@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 .App {
   display: grid;
   background-image: url('https://wallpaperplay.com/walls/full/f/8/8/89139.jpg');
@@ -66,7 +72,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  height: 500px;
+  height: 400px;
   width: 750px;
   border: 1px solid #4c65f5;
   background-position: center;
@@ -75,7 +81,38 @@
   box-shadow: 3px 3px 20px 0px #0000006e;
 }
 
+.signup {
+  display: flex;
+  justify-content: center;
+}
 
+.signup>span {
+  width: 200px;
+  border: 1px solid #4c65f5;
+  box-shadow: 3px 3px 20px 0px #0000006e;
+  background-color: #ffffffb8;
+  padding: 10px;
+  margin: 10px;
+  height: 70px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.signup>span>button {
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #61d7a8;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.signup>span>button:hover {
+    cursor: pointer;
+    background-color: #00ab94;
+}
 /* Account Page */
 
 .account {
@@ -87,17 +124,21 @@
   display: flex;
   flex-direction: column;
   margin-top: 3%;
-  background-color: #ffffff8a;
+  margin-bottom: 3%;
+  background-color: #ffffffc2;
   box-shadow: 3px 3px 20px 0px #0000006e;
+  border-radius: 3px;
 }
 
 .account-img {
-  width: 20%;
+  width: 26%;
   border-radius: 400px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #4c65f5;
+  border: 1px solid;
   margin-top: 15px;
+  position: relative;
+  left: 30px;
 }
 
 .notary-name {
@@ -105,6 +146,8 @@
   height: 50px;
   font-size: 40px;
   font-weight: bold;
+  border-bottom: 1px solid;
+  color: white;
 }
 
 .bio {
@@ -116,6 +159,8 @@
   margin-bottom: 15px;
   font-size: 34px;
   border-radius: 3px;
+  text-align: left;
+  padding: 10px;
 }
 
 .chat-button {
@@ -137,6 +182,17 @@
   height: 50px;
 }
 
+.verfied-text {
+  font-weight: bold;
+  color: white;
+  background-color: #61d7a88a;
+  border-radius: 5px;
+  padding: 5px;
+  border: 2px solid #37e29e;
+  width: 10%;
+  margin: auto;
+}
+
 /* Chat */
 
 .chat {
@@ -152,7 +208,7 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border: 1px solid #0000003d;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .chat>p:nth-child(even) {

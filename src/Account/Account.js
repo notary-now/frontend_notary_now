@@ -15,13 +15,16 @@ function Account() {
   ,[])
 
   return (
+
     <section className="account">
+    {account.notary_values && <>
       <span className='notary-name'>{account.first_name} {account.last_name}</span>
-      <span><img className="account-img" src={account.profile_photo} alt='notary'/><img className="verified" alt='verified' src={logo}/></span>
-      <span className="bio">Bio: I have been notarizing since a young age, I am currently based in Highlands Ranch. I am willing to travel as far as the DTC to meet to notarize. I prefer to work from 5:30-7:30 M - F.</span>
-      <span className="bio">Location: 80224</span>
-      <span className="bio">Commission Dates: 1/2/2020 - 1/2/2222</span>
-      <button className="chat-button">CHAT NOW!</button>
+      <span><img className="account-img" src={account.profile_photo} alt='notary'/><span className="verfied-text"><img className="verified" alt='verified' src={logo}/>VERIFIED</span></span>
+      <span className="bio">{account.notary_values.bio}</span>
+      <span className="bio">Location: {account.zip_code}</span>
+      <span className="bio">Commission: {account.notary_values.commission_date}<br/>Expiration: {account.notary_values.expiration_date}</span>
+      </>
+    }
     </section>
   );
 }

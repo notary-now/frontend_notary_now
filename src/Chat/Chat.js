@@ -10,7 +10,7 @@ function Chat(props) {
 
 
   useEffect(() => {
-    socketIOClient("http://127.0.0.1:3001").on("chat message", data => {
+    socketIOClient("https://notary-now-chat.herokuapp.com").on("chat message", data => {
       updateChat(chatSystem => [...chatSystem, data])
     })
   }, [])
@@ -25,7 +25,7 @@ function Chat(props) {
         onChange={(event) => updateInput(event.target.value)}
         onKeyPress={(event)=>{
           if (event.key === 'Enter') {
-            socketIOClient("http://127.0.0.1:3001").emit('chat message', input)
+            socketIOClient("https://notary-now-chat.herokuapp.com").emit('chat message', input)
             event.target.value = ''
           }
         }}
