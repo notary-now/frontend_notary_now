@@ -115,6 +115,10 @@
 }
 /* Account Page */
 
+.account-div {
+  overflow-y: auto;
+}
+
 .account {
   text-align: center;
   width: 80%;
@@ -167,10 +171,12 @@
   background-color: #61d7a8;
   font-size: 34px;
   font-weight: bold;
-  width: 50%;
+  width: 40%;
   margin: auto;
   margin-bottom: 15px;
   border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .chat-button:hover {
@@ -249,4 +255,39 @@
 
 .find {
   overflow-y: scroll;
+}
+
+.date-picker {
+  position: fixed;
+  z-index: 2;
+  top: 40%;
+  width: 300px;
+  background-color: #61d7a8;
+  text-align: center;
+  left: 50%;
+  height: 200px;
+  margin-left: -150px;
+}
+
+/* Schedule */
+
+.schedule {
+  display: flex;
+  justify-content: center;
+}
+
+.appointments {
+  padding: 5px;
+  background-color: white;
+  height: 18%;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #4c65f5;
+  margin-top: 10px;
+  box-shadow: 3px 3px 20px 0px #0000006e;
+}
+
+.schedule-header {
+  text-align: center;
 }

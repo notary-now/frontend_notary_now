@@ -4,6 +4,7 @@ import logo from '../Imgs/logo.svg'
 
 function Find(props) {
   let [notaries, setNotaries] = useState({})
+  let [booking, setBooking] = useState({show: false})
 
   useEffect(() => {
 
@@ -18,11 +19,15 @@ function Find(props) {
               <span className="bio">{account.notary_values.bio}</span>
               <span className="bio">Location: {account.zip_code}</span>
               <span className="bio">Commission: {account.notary_values.commission_date}<br/>Expiration: {account.notary_values.expiration_date}</span>
-              <button onClick={()=> {props.showChat(true)}} className="chat-button">CHAT NOW!</button>
+              <span>
+                <button onClick={()=> {props.showChat(true)}} className="chat-button">CHAT NOW</button>
+                <button onClick={()=> {setBooking({show:true, name: `${account.first_name} ${account.last_name}`})}} className="chat-button">BOOKING</button>
+              </span>
+
+
             </section>
           )
         })
-          console.log(allNotaries);
           setNotaries(allNotaries)
       }
     )
@@ -30,9 +35,16 @@ function Find(props) {
     },[])
 
   return (
-    <>
+    <div className={booking ? "find dark" : "find"}>
+    {booking.show &&
+      <article className="date-picker">
+        Book with: {booking.name}
+        <input type="date"/><button onClick={() => setBooking({show:false})}>X</button>
+        <button>Submit</button>
+      </article>
+              }
     {notaries.length && notaries}
-    </>
+    </div>
   );
 }
 

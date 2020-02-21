@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Header from '../Header/Header'
 import Account from '../Account/Account'
 import Find from '../Find/Find'
+import Schedule from '../Schedule/Schedule'
 import {Route} from 'react-router-dom'
 import Chat from '../Chat/Chat'
 import './App.css';
@@ -62,9 +63,9 @@ function App() {
           return (
             <>
               <Header/>
-              <div className="find">
+
                 <Find showChat={showChat}/>
-              </div>
+
             </>
           )
           }}
@@ -77,7 +78,7 @@ function App() {
             return (
               <>
                 <Header/>
-                <div>
+                <div className="account-div">
                   <Account/>
                 </div>
               </>
@@ -92,6 +93,9 @@ function App() {
             return (
                 <>
                  <Header/>
+                 <div>
+                  <Schedule/>
+                 </div>
                 </>
              )
              }}
