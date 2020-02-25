@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Header from '../Header/Header'
 import Account from '../Account/Account'
 import Find from '../Find/Find'
+import Schedule from '../Schedule/Schedule'
 import {Route} from 'react-router-dom'
 import Chat from '../Chat/Chat'
 import './App.css';
@@ -12,6 +13,7 @@ import golfing from '../Imgs/golfing.jpg'
 import notary from '../Imgs/notary.jpg'
 
 function App() {
+
   let [chat, showChat] = useState(false)
   const imgArrary = [desk,notary,golfing,boat]
   const textArray = ['Notary Now: You are busy, let us help you with your work.','Find Notaries Near you in minutes!','Get back to the things you love.','You earned it.']
@@ -62,9 +64,9 @@ function App() {
           return (
             <>
               <Header/>
-              <div className="find">
+
                 <Find showChat={showChat}/>
-              </div>
+
             </>
           )
           }}
@@ -77,7 +79,7 @@ function App() {
             return (
               <>
                 <Header/>
-                <div>
+                <div className="account-div">
                   <Account/>
                 </div>
               </>
@@ -92,6 +94,9 @@ function App() {
             return (
                 <>
                  <Header/>
+                 <div>
+                  <Schedule/>
+                 </div>
                 </>
              )
              }}

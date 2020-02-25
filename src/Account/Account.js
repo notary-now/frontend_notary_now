@@ -1,16 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import logo from '../Imgs/logo.svg'
+import {getAccount} from '../fetchCalls.js'
 
 
 function Account() {
   let [account, setAccount] = useState({})
 
   useEffect(() => {
-
-  fetch("https://backend-notary-now.herokuapp.com/api/v1/notaries/1")
-    .then(response => response.json())
-    .then(result => setAccount(result))
-    .catch(error => console.log('error', error));
+    getAccount(setAccount)
     }
   ,[])
 

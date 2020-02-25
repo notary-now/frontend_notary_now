@@ -1,15 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Header from './Header';
+import Find from './Find';
 
-describe('Header', () => {
-  let header;
+describe('Find', () => {
+  let find;
 
   beforeEach(() => {
-    header = shallow(<Header />);
+    find = shallow(<Find />);
   });
 
   it('should match the snapshot with all data passed in correctly', () => {
-    expect(header).toMatchSnapshot();
+    expect(find).toMatchSnapshot();
   });
 });

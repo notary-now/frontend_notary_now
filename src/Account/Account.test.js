@@ -1,15 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Header from './Header';
+import Account from './Account';
 
-describe('Header', () => {
-  let header;
+describe('Account', () => {
+  let account;
 
   beforeEach(() => {
-    header = shallow(<Header />);
+    account = shallow(<Account />);
   });
 
   it('should match the snapshot with all data passed in correctly', () => {
-    expect(header).toMatchSnapshot();
+    expect(account).toMatchSnapshot();
   });
 });
