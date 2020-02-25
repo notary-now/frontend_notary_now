@@ -13,6 +13,7 @@ import golfing from '../Imgs/golfing.jpg'
 import notary from '../Imgs/notary.jpg'
 
 function App() {
+
   let [chat, showChat] = useState(false)
   const imgArrary = [desk,notary,golfing,boat]
   const textArray = ['Notary Now: You are busy, let us help you with your work.','Find Notaries Near you in minutes!','Get back to the things you love.','You earned it.']
