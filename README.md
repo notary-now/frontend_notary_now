@@ -20,6 +20,12 @@ You can build the package for production using the command `npm run build`
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
+### NotaryNow Backend
+The Backend NotaryNow application can be found on the [NotaryNow Backend GitHub](https://github.com/notary-now/backend_notary_now)
+
+### NotaryNow Chat
+The Chat server for the NotaryNow application can be found on the [NotaryNow Chat GitHub](https://github.com/notary-now/chat-backend)
+
 ### Technologies
 - React
 - Jest
