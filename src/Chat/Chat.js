@@ -6,9 +6,6 @@ function Chat(props) {
     let [chatSystem, updateChat] = useState([])
     let [input, updateInput] = useState(null)
 
-
-
-
   useEffect(() => {
     socketIOClient("https://notary-now-chat.herokuapp.com").on("chat message", data => {
       updateChat(chatSystem => [...chatSystem, data])

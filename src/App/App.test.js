@@ -1,7 +1,15 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import App from '../App/App';
+import { shallow } from 'enzyme';
+import App from './App';
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(1).toBe(1);
+describe('App', () => {
+  let app;
+
+  beforeEach(() => {
+    app = shallow(<App />);
+  });
+
+  it('should match the snapshot with all data passed in correctly', () => {
+    expect(app).toMatchSnapshot();
+  });
 });

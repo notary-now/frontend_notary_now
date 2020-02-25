@@ -260,13 +260,62 @@
 .date-picker {
   position: fixed;
   z-index: 2;
-  top: 40%;
-  width: 300px;
-  background-color: #61d7a8;
+  width: 100vw;
+  background-color: #06060696;
   text-align: center;
   left: 50%;
-  height: 200px;
+  height: 100vh;
+  margin-left: -50vw;
+}
+
+.date-center {
+  position: fixed;
+  width: 300px;
+  left: 50%;
+  top: 40%;
+  background-color: white;
   margin-left: -150px;
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+
+.date-input {
+  height: 35px;
+  margin-top: 5%;
+}
+
+.date-submit {
+  background-color: #61d7a8;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 5px;
+  height: 38px;
+  border: 0px;
+}
+
+.date-submit:hover {
+  cursor: pointer;
+  background-color: #00ab94;
+}
+
+.x-date {
+  height: 18px !important;
+  border-radius: 30px;
+  position: relative;
+  top: -155px;
+  right: -119px;
+}
+
+.x-date:hover {
+  color: white;
+  background-color: black;
+}
+
+.location {
+  height: 30px;
 }
 
 /* Schedule */
@@ -277,7 +326,7 @@
 }
 
 .appointments {
-  padding: 5px;
+  padding: 10px;
   background-color: white;
   height: 18%;
   margin-left: 10px;

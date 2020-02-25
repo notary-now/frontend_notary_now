@@ -1,15 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Header from './Header';
+import Schedule from './Schedule';
 
-describe('Header', () => {
-  let header;
+describe('Schedule', () => {
+  let schedule;
 
   beforeEach(() => {
-    header = shallow(<Header />);
+    schedule = shallow(<Schedule />);
   });
 
   it('should match the snapshot with all data passed in correctly', () => {
-    expect(header).toMatchSnapshot();
+    expect(schedule).toMatchSnapshot();
   });
 });

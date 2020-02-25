@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {getAppointments} from '../fetchCalls.js'
 
 
 function Schedule() {
@@ -6,19 +7,7 @@ function Schedule() {
   let [schedule, setSchedule] = useState()
 
   useEffect(() => {
-    fetch('https://backend-notary-now.herokuapp.com/api/v1/notaries/1/appointments')
-    .then(result => result.json())
-    .then(data => {
-      let upcoming = data.map(data => {
-        return (
-          <div className="appointments">
-            <p>Date: {data.date}</p>
-            <p>Time: {data.time}</p>
-            <p>Address: {data.location}</p>
-          </div>
-        )})
-      setSchedule(upcoming)
-  })
+    getAppointments(setSchedule)
 },[])
 
   return (
