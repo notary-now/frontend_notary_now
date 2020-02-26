@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/notary-now/frontend_notary_now.svg?branch=master)](https://travis-ci.org/notary-now/frontend_notary_now)
+
 # NotaryNow
 ## Frontend
 
