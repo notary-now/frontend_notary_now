@@ -34,8 +34,12 @@ export const getAppointments = (setSchedule) => {
           <p>Address: {data.location}</p>
           <p>Status: {data.status}</p>
           <span>
-            <button onClick={async () => {await postStatus(data.id,'COMPLETED'); await getAppointments(setSchedule)}}>COMPLETED</button>
-            <button onClick={async () => {await postStatus(data.id,'CANCELLED'); await getAppointments(setSchedule)}}>CANCEL</button>
+          {data.status === "Pending" &&
+            <>
+              <button onClick={async () => {await postStatus(data.id,'COMPLETED'); await getAppointments(setSchedule)}}>COMPLETED</button>
+              <button onClick={async () => {await postStatus(data.id,'CANCELLED'); await getAppointments(setSchedule)}}>CANCEL</button>
+            </>
+          }
           </span>
         </div>
       )})

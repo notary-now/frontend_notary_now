@@ -181,6 +181,12 @@
   border-radius: 5px;
   margin-left: 10px;
   margin-right: 10px;
+  color: white;
+}
+
+.account>.chat-button {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .chat-button:hover {
@@ -348,6 +354,7 @@
   border-radius: 5px;
   border: 1px solid #4c65f5;
   margin-top: 10px;
+  margin-bottom: 10px;
   box-shadow: 3px 3px 20px 0px #0000006e;
 }
 
