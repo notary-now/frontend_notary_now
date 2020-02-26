@@ -1,11 +1,10 @@
 language: node_js
 node_js:
 - stable
-cache: bundler
+cache:
   directories:
   - node_modules
 script:
-- npm i
 - npm test
 deploy:
   provider: heroku
