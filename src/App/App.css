@@ -56,6 +56,10 @@
   display: inline;
 }
 
+.nav-right>a {
+  text-decoration: none;
+}
+
 .logo-text {
   font-size: 50px;
   color: white;
@@ -199,6 +203,14 @@
   margin: auto;
 }
 
+.edit {
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
 /* Chat */
 
 .chat {
@@ -318,11 +330,13 @@
   height: 30px;
 }
 
+
 /* Schedule */
 
 .schedule {
-  display: flex;
-  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
 }
 
 .appointments {
@@ -339,4 +353,25 @@
 
 .schedule-header {
   text-align: center;
+}
+
+.appointments>span>button {
+  height: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #61d7a8;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.appointments>span>button:hover {
+    cursor: pointer;
+    background-color: #00ab94;
+}
+
+.schedule-page {
+  overflow-y: auto;
 }

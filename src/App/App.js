@@ -94,7 +94,7 @@ function App() {
             return (
                 <>
                  <Header/>
-                 <div>
+                 <div className="schedule-page">
                   <Schedule/>
                  </div>
                 </>
